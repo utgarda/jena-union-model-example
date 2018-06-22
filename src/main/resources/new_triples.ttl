@@ -1,0 +1,11 @@
+@prefix :       <http://example.org/> .
+@prefix foaf:   <http://xmlns.com/foaf/0.1/> .
+@prefix schema: <http://schema.org/> .
+
+
+:claire
+    a           foaf:Person ;
+    foaf:name   "Claire" ;
+    schema:identifier "3" ;
+    :friend_id   "1" ;
+    .

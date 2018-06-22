@@ -1,0 +1,16 @@
+@prefix :       <http://example.org/> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+@prefix foaf:   <http://xmlns.com/foaf/0.1/> .
+@prefix schema: <http://schema.org/>
+
+-> print("alignment rules loaded") .
+
+[find_friends:
+  (?person :friend_id ?fid)
+  (?friend rdf:type foaf:Person)
+  (?friend schema:identifier ?fid)
+  print("rule matched: ", ?person, " knows ", ?friend)
+  ->
+    drop(0)
+    (?person foaf:knows ?friend)]
+
